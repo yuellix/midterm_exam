@@ -1,6 +1,12 @@
 <!-- blog/templates/blog/post_create.html -->
-{% extends 'blog/base.html' %} {% block title %}Create New Post{% endblock %} {%
-block content %}
+<!-- filepath: c:\codeenv\django\midLabG2\midterm_exam\blog\template\blog\post_create.html -->
+{% extends 'blog/base.html' %}
+
+{% block title %}
+Create New Post
+{% endblock %}
+
+{% block content %}
 <h1 class="mb-4">Create New Post</h1>
 <form method="post">
   {% csrf_token %}
@@ -17,9 +23,7 @@ block content %}
     />
   </div>
   <div class="mb-3">
-    <label for="{{ form.content.id_for_label }}" class="form-label"
-      >Content</label
-    >
+    <label for="{{ form.content.id_for_label }}" class="form-label">Content</label>
     {{ form.content.errors }}
     <textarea
       name="{{ form.content.name }}"
